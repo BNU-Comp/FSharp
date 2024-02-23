@@ -1,0 +1,16 @@
+# F# specific
+*.exe
+*.exe~
+*.pdb
+*.dll
+*.dll.config
+*.fsproj.user
+*.user
+*.suo
+bin/
+obj/
+[Ff]Sharp-*/ # For F# script projects
+# Ionide (cross platform F# VS Code tools) working folder
+.ionide/
+
+.fake
