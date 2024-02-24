@@ -1,2 +1,2 @@
-# Module COM5?? Functional Programming
+# Module CO561 Functional Programming
 Examples based on exercise examples
