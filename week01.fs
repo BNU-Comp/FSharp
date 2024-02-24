@@ -9,7 +9,7 @@ let exercise3 =
     let name = Console.ReadLine()
 
     Console.Write("Enter your age > ")
-    let age = int(Console.ReadLine())
+    let age = Helpers.getInteger "Enter your age > " 1 120
 
     Console.Write("Enter your height in meters > ")
     let height = float(Console.ReadLine())
