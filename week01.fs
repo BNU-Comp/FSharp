@@ -30,3 +30,12 @@ module exercise3 =
         let height = float(Console.ReadLine())
 
         Console.WriteLine($"\n    Your name = {name} aged {age} height {height}\n")
+
+// A function that gets 2 integers from the user and returns the sum of the two integers    
+module exercise4 =
+    let run () =
+        let num1 = Helpers.getInteger "\nEnter first number > " 1 100
+        let num2 = Helpers.getInteger "Enter second number > " 1 100
+        let sum = num1 + num2
+        printfn "The sum of %d and %d is %d\n" num1 num2 sum
+
