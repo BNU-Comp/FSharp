@@ -39,3 +39,21 @@ module exercise4 =
         let sum = num1 + num2
         printfn "The sum of %d and %d is %d\n" num1 num2 sum
 
+// A function that asks the user to enter two numbers and then choose an operator from +,-,*,/.  
+// The function then returns the result of addition, subtraction, multiplication or division
+// based on the user's choice.
+module exercise5 =
+    let run () =
+        let num1 = Helpers.getInteger "\nEnter first number > " 1 100
+        let num2 = Helpers.getInteger "Enter second number > " 1 100
+        Console.Write("Enter an operator (+, -, *, /) > ")
+        let op = Console.ReadLine()
+        let result = 
+            match op with
+            | "+" -> num1 + num2
+            | "-" -> num1 - num2
+            | "*" -> num1 * num2
+            | "/" -> num1 / num2
+            | _ -> 0
+        printfn "The result of %d %s %d is %d\n" num1 op num2 result
+
