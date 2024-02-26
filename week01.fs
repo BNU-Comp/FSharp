@@ -2,7 +2,7 @@ module week01
 
 open System
 
-// Exercise 01
+// Exercise 01 & 02
 
 module exercise01 = 
     
@@ -14,6 +14,8 @@ module exercise01 =
         printfn "%s" name
         printfn "%i" age
         printfn "%f" height
+
+        Console.WriteLine($"Name: {name}, Age: {age}, Height: {height}")
 
 // Week 1 Exercise 3
 
@@ -31,7 +33,8 @@ module exercise3 =
 
         Console.WriteLine($"\n    Your name = {name} aged {age} height {height}\n")
 
-// A function that gets 2 integers from the user and returns the sum of the two integers    
+// A function that gets 2 integers from the user and returns the sum 
+// of the two integers 
 module exercise4 =
     let run () =
         let num1 = Helpers.getInteger "\nEnter first number > " 1 100
