@@ -76,12 +76,27 @@ module exercise6 =
 // the numbers between the start and finish numbers.
 module exercise7 =
     let run () =
-        let start = Helpers.getInteger "\nEnter start number > " 1 100
-        let finish = Helpers.getInteger "Enter finish number > " 1 100
+        let start = Helpers.getInteger "\n  Enter start number > " 1 100
+        let finish = Helpers.getInteger "  Enter finish number > " 1 100
         let sum = 
             let rec loop i acc =
                 if i > finish then acc
                 else loop (i + 1) (acc + i)
             loop start 0
         printfn "\n The sum of all numbers between %d and %d is %d\n" start finish sum
+
+// A function that is the same as exercise 6 but uses if-else instead of match
+module exercise8 =
+    let run () =
+        let num1 = Helpers.getInteger "\nEnter first number > " 1 100
+        let num2 = Helpers.getInteger "Enter second number > " 1 100
+        Console.Write("Enter an operator (+, -, *, /) > ")
+        let op = Console.ReadLine()
+        let result = 
+            if op = "+" then num1 + num2
+            elif op = "-" then num1 - num2
+            elif op = "*" then num1 * num2
+            elif op = "/" then num1 / num2
+            else 0
+        printfn "The result of %d %s %d is %d\n" num1 op num2 result
 
