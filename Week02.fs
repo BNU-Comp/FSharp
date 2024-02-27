@@ -65,3 +65,26 @@ module exercise08 =
         Console.Write("  List of squares is: ")
         printf $"%A{result}"
         Console.WriteLine()
+
+// Exercise 9 and exercise 10 are two parts of the same topic
+module exercise09 = 
+    let run () =
+        let intDivList  = 
+            [
+                let intDivide x = x / 2
+                for i in 1..10 do
+                    yield intDivide i
+            ]
+        Console.Write("  intDivList is: ")
+        printfn $"%A{intDivList}"
+        Console.Write("  Length of intDivList is: ")
+        Console.WriteLine(List.length intDivList)
+        Console.Write("  Head of intDivList is: ")
+        Console.WriteLine(List.head intDivList)
+
+        let tail = List.tail intDivList
+        Console.Write("  Tail of intDivList is: ")
+        for i in tail do
+            Console.Write($"{i} ")
+        
+        Console.WriteLine()
