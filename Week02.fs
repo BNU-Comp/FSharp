@@ -26,3 +26,13 @@ module exercise04 =
         Console.Write($"  The larger is: ")
         Console.WriteLine(LargerOfTwo 5 7)
         Console.WriteLine()
+
+module exercise05 = 
+    let run () = 
+        let Digits = [4;8;12;16;20]
+        Console.Write("  List of int is: ")
+        printfn $"%A{Digits}"
+        Console.WriteLine()
+        
+
+  
