@@ -67,6 +67,7 @@ module exercise08 =
         Console.WriteLine()
 
 // Exercise 9 and exercise 10 are two parts of the same topic
+// Create a list of numbers, then divide each number by 2
 module exercise09 = 
     let run () =
         let intDivList  = 
@@ -88,3 +89,52 @@ module exercise09 =
             Console.Write($"{i} ")
         
         Console.WriteLine()
+
+// Create a list of cars, then check if a car is in the list
+module exercise11 =
+    let run () =
+        let cars = ["Toyota";"Vauxhall";"Ford";"Honda"]
+        let found = List.exists(fun c->c="Honda") cars
+        if found then
+            Console.WriteLine("  \nHonda is in list\n")
+        else
+            Console.WriteLine("  \nHonda is not in list\n")
+
+// Create a list of names, then delete one of the names
+module exercise12 =
+    let run () =
+        let mutable nameList = []
+
+        for n in 1..3 do
+            Console.Write("Enter Name :")
+        
+            let element = Console.ReadLine()    
+            nameList<-element::nameList
+
+        for n in nameList do
+            Console.WriteLine(n)
+
+        Console.Write("Enter Name to Delete :")
+        let delElement = Console.ReadLine()
+        nameList<-List.filter(fun n->n <> delElement) nameList
+
+        for n in nameList do
+            Console.WriteLine(n)
+
+// Excercise 13 
+// Create a list of grades and a list of marks, then zip the two lists together
+// Find the mark for a given grade C
+module exercise14 =
+    let run () =
+        let grades = ['A';'B';'C';'D']
+        let marks = [70;60;50;40]
+
+        let gradeMarks = List.zip grades marks
+
+        let gm = List.find(fun m-> fst m = 'C') gradeMarks
+        Console.Write("  \nGrade C has mark: ")
+        Console.WriteLine(snd gm)
+        Console.WriteLine()
+
+
+// End of Week02.fs
