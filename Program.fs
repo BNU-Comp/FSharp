@@ -7,7 +7,7 @@ open Week02
 [<EntryPoint>]
 let main argv =
     printfn "\n  Hello from F#"
-    printfn "  Calling Week 02 Exercise 1 - 4"
+    printfn "  Calling Week 03 Exercises"
     printfn " "
 
     // Week02.exercise01.run()
@@ -20,7 +20,10 @@ let main argv =
     // Week02.exercise08.run()
     // Week02.exercise09.run()
     // Week02.exercise11.run()
-    Week02.exercise12.run()
-    Week02.exercise14.run()
+    // Week02.exercise12.run()
+    // Week02.exercise14.run()
+
+    Week03.exercise01.run()
+
     0
 
