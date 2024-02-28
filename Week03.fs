@@ -26,3 +26,18 @@ module exercise02 =
         List.iter Display lenCities
         
         Console.WriteLine("  ")
+
+// This is a module that contains a list of digits
+module lists =
+    let digits = [0..9]
+
+// This is a module that takes a list and displays it
+module functions = 
+    let it lst = 
+        List.iter (fun x -> printf "%d " x) lst
+
+module exercise04 =
+    let run () = 
+        Console.WriteLine("  Digits: \n")
+        functions.it lists.digits
+        Console.WriteLine("  ")
