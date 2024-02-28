@@ -23,9 +23,10 @@ let main argv =
     // Week02.exercise12.run()
     // Week02.exercise14.run()
 
-    Week03.exercise01.run()
-    Week03.exercise02.run()
-    Week03.exercise04.run()
+    //Week03.exercise01.run()
+    //Week03.exercise02.run()
+    //Week03.exercise04.run()
 
+    Week05.exercise01.run()
     0
 
