@@ -36,8 +36,13 @@ module functions =
     let it lst = 
         List.iter (fun x -> printf "%d " x) lst
 
+// This is a module that takes a list and accumulates the sum of the elements
 module exercise04 =
     let run () = 
         Console.WriteLine("  Digits: \n")
         functions.it lists.digits
         Console.WriteLine("  ")
+        
+        let accumulate acc x = acc + x
+        let sum = List.fold accumulate 0 lists.digits
+        Console.WriteLine($"  Sum of digits = {sum}\n")
