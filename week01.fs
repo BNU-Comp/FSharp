@@ -100,3 +100,26 @@ module exercise8 =
             else 0
         printfn "The result of %d %s %d is %d\n" num1 op num2 result
 
+// A function that asks the user to enter a number and then returns
+// the factorial of that number.
+module exercise9 =
+    let run () =
+        let num = Helpers.getInteger "\nEnter a number > " 1 10
+        let rec factorial n =
+            if n = 1 then 1
+            else n * factorial (n - 1)
+        let result = factorial num
+        printfn "The factorial of %d is %d\n" num result
+
+// A function that asks the user to enter a number and then returns
+// the sum of the digits of that number.
+module exercise10 =
+    let run () =
+        let num = Helpers.getInteger "\nEnter a number > " 1 1000
+        let rec sumDigits n acc =
+            if n = 0 then acc
+            else sumDigits (n / 10) (acc + (n % 10))
+        let result = sumDigits num 0
+        printfn "The sum of the digits of %d is %d\n" num result
+
+
