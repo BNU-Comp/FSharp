@@ -13,6 +13,17 @@ let jane = ShortCourse true
 let sally = ALevel 'A'
 let students = [mary;jane;sally]
 
+// Exercise 3
+type Module = {code:string; name:string; sessions:int}
+                member this.Print =
+                            Console.Write("  Code:" + this.code)
+                            Console.Write("  " + this.name)
+                            Console.WriteLine($" Sessions {this.sessions}")
+let AIP = {code="CO603";name="Advanced Interative Programming";sessions=16}
+let SE = {code="CO601";name="Software Engineering";sessions=16}
+let FM = {code="CO605";name="Formal Methods";sessions=16}
+let Project = {code="CO699";name="Project";sessions=0}
+
 // A display function that takes a qualification and displays it 
 module exercise01 = 
  
@@ -51,6 +62,24 @@ module exercise02 =
         DisplayQualifications students
 
 //DisplayQualifications students
+module exercise04 = 
+    let run () =
+        Console.WriteLine("\n  Modules:")
+        AIP.Print
+        SE.Print
+        FM.Print
+        Project.Print
+
+module exercise05 = 
+    let run () =
+        Console.WriteLine("\n  Module List:")
+        let modules = [AIP;SE;FM;Project]
+
+        let DisplayModules m =
+            for  s:Module in m do
+            s.Print
+
+        DisplayModules modules
 
 
 
