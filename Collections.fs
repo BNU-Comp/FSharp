@@ -9,13 +9,17 @@ let printMeanScore (row : string) =
     let name = elements.[0]
     let id =  elements.[1]
     
-    let score = 
+    let scores = 
         elements
         |> Array.skip 2
         |> Array.map float
-        |> Array.average
+
+    let meanScore = scores |> Array.average
+    let minScore = scores |> Array.min
+    let maxScore = scores |> Array.max
+
+    printfn "  %s\t%s\t%0.1f\t%0.1f\t%0.1f" name id meanScore minScore maxScore
     
-    printfn "  %s\t%s\t%0.1f" name id score
 let readData filePath = 
     let rows = System.IO.File.ReadAllLines(filePath)
     // let data = 
