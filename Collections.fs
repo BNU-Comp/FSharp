@@ -13,16 +13,19 @@ let readData filePath =
     //     |> Array.map (fun row -> row.Split('\t'))
     //     |> Array.map (fun cols -> (cols.[0], cols.[1], int cols.[2]))
     
-    printfn "  Read %d rows from file" rows.Length
+    printfn "  Read %d rows from file\n" rows.Length
     rows
         |> Array.skip 1 
         |> Array.iter printMeanScore
+    
+    printfn "  \nFile Read Complete\n"
+    
 
 
-module exercise01 = 
+module ReadFile = 
     let run() = 
         Console.WriteLine("  Collections with file data")
         let filePath = "data/StudentScores.txt"
-        Console.WriteLine("  Reading data from file")
+        Console.WriteLine("  Reading data from file\n")
         readData filePath
         0
