@@ -3,6 +3,8 @@ module Week05
 // Your code here
 open System
 
+
+
 type Qualification =
     | Degree of int * int
     | ShortCourse of bool
