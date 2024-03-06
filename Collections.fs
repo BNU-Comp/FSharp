@@ -3,29 +3,53 @@ module Collections
 
 open System
 
+type Student = 
+    { 
+        Name : string
+        Id : string
+        Mean : float
+        Min : float
+        Max : float
+    }
+
 (*
-    Read a row of data from the file
-    Split the row into its elements
+    Split the string into its elements
     Extract the name and id from the first two elements
     Extract the scores from the remaining elements
     Calculate the mean, min and max scores
     Print the name, id, mean, min and max scores
 *)
-let printMeanScore (row : string) = 
-    let elements = row.Split('\t')
-    let name = elements.[0]
-    let id =  elements.[1]
-    
-    let scores = 
-        elements
-        |> Array.skip 2
-        |> Array.map float
+module Student =
+    let fromString(s:string) =
 
-    let meanScore = scores |> Array.average
-    let minScore = scores |> Array.min
-    let maxScore = scores |> Array.max
+        let elements = s.Split('\t')
+        let name = elements.[0]
+        let id =  elements.[1]
+        
+        let scores = 
+            elements
+            |> Array.skip 2
+            |> Array.map float
 
-    printfn "  %s\t%s\t%0.1f\t%0.1f\t%0.1f" name id meanScore minScore maxScore
+        let meanScore = scores |> Array.average
+        let minScore = scores |> Array.min
+        let maxScore = scores |> Array.max
+        { 
+            Name = name;
+            Id = id; 
+            Mean = meanScore; 
+            Min = minScore; 
+            Max = maxScore 
+        }
+
+
+    let printMeanScore (student : Student) = 
+
+            printfn "  %s\t%s\t%0.1f\t%0.1f\t%0.1f" 
+                student.Name student.Id 
+                student.Min 
+                student.Max
+                student.Mean 
 
 (*
     Read all the rows of the file as an array of strings
@@ -43,7 +67,8 @@ let readData filePath =
     
     rows
         |> Array.skip 1 
-        |> Array.iter printMeanScore
+        |> Array.map Student.fromString
+        |> Array.iter Student.printMeanScore
     
     printfn "  \nFile Read Complete\n"
 
