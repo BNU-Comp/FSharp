@@ -34,7 +34,7 @@ let main argv =
 
     //ignore(Collections.ReadFile.run())
 
-    Slides5.exercise01.run()
+    Slides5.exercise02.run()
 
 
 
