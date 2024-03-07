@@ -32,7 +32,9 @@ let main argv =
     //Week05.exercise04.run()
     //Week05.exercise05.run()
 
-    ignore(Collections.ReadFile.run())
+    //ignore(Collections.ReadFile.run())
+
+    Slides5.exercise01.run()
 
 
 

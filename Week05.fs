@@ -3,8 +3,6 @@ module Week05
 // Your code here
 open System
 
-
-
 type Qualification =
     | Degree of int * int
     | ShortCourse of bool
@@ -28,8 +26,7 @@ let Project = {code="CO699";name="Project";sessions=0}
 
 // A display function that takes a qualification and displays it 
 module exercise01 = 
- 
-    let run () = 
+     let run () = 
         let Display q = 
             match q with
             | Degree (y, m) -> printfn "  Degree: %d years %d months" y m
