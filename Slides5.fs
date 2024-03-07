@@ -47,3 +47,14 @@ module exercise02 =
         WelcomePerson kate
         WelcomePerson twinOfKate
         0   
+module exercise03 =
+    type PersonRecord2 = {  FirstName:string
+                            LastName:string
+                            Age:int}
+                            member this.Print =
+                                Console.WriteLine($"  {this.FirstName} {this.LastName} is now {this.Age} years old")
+    let run() =
+        let kate = {FirstName="Kate"; LastName="Ibom"; Age=22;}
+        kate.Print
+
+        0
