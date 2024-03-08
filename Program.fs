@@ -1,8 +1,7 @@
 ﻿module Program
 
 open System
-open week01
-open Week02
+
 
 [<EntryPoint>]
 let main argv =
