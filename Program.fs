@@ -2,7 +2,6 @@
 
 open System
 
-
 [<EntryPoint>]
 let main argv =
     printfn "\n  Hello from F#"
@@ -31,7 +30,7 @@ let main argv =
     //Week05.exercise04.run()
     //Week05.exercise05.run()
 
-    //ignore(Collections.ReadFile.run())
+    //Collections.ReadFile.run()
 
     //Slides5.exercise01.run()
     //Slides5.exercise02.run()
