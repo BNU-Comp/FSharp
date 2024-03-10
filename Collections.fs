@@ -3,6 +3,8 @@ module Collections
 
 open System
 
+// Define a record type to hold the student data
+// and five fields to hold the name, id, mean, min and max scores
 type Student = 
     { 
         Name : string
@@ -20,6 +22,7 @@ type Student =
     Print the name, id, mean, min and max scores
 *)
 module Student =
+    //
     let fromString(s:string) =
 
         let elements = s.Split('\t')

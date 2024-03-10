@@ -34,7 +34,8 @@ let main argv =
 
     //Slides5.exercise01.run()
     //Slides5.exercise02.run()
-    Slides5.exercise03.run()
+    //Slides5.exercise03.run()
+    Week07.patterns.run()
 
     0
 

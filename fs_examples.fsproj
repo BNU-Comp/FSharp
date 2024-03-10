@@ -6,6 +6,7 @@
   <ItemGroup>
     <Compile Include="Helpers.fs" />
     <Compile Include="Collections.fs" />
+    <Compile Include="Week07.fs" />
     <Compile Include="Slides5.fs" />
     <Compile Include="Week05.fs" />
     <Compile Include="Week03.fs" />
